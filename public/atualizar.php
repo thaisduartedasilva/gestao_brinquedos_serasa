@@ -9,6 +9,14 @@ $faixa_etaria = $_POST["faixa_etaria"];
 $preco = $_POST["preco"];
 $quantidade = $_POST["quantidade"];
 
-$sql = "UPDATE brinquedo SET "
+$sql = "UPDATE brinquedo SET nome = ?, categoria = ?, faixa_etaria = ?, preco = ?, quantidade = ? WHERE id = ?";
+$stmt = $conn->prepare($sql);
+
+$stmt->bind_param("sssiii", $nome, $categoria, $faixa_etaria, $preco, $quantidade, $id);
+
+$stmt->execute();
+
+header("Location: ../index.php");
+//exit;
 
 ?>
