@@ -10,5 +10,5 @@ CREATE TABLE brinquedo(
     quantidade INT NOT NULL
 );
 
-INSERT INTO brinquedos (nome, categoria, faixa_etaria, preco, quantidade) VALUES
+INSERT INTO brinquedo (nome, categoria, faixa_etaria, preco, quantidade) VALUES
 ('Cubo magico', '?', '7-10 anos', '20', '200');
