@@ -60,7 +60,7 @@ $brinquedo = mysqli_query($conexao, "SELECT * FROM brinquedo");
             <option value=7-10 anos>7-10 anos</option>
         </select>
         <br>
-        <label for="preco">Preço: </label>
+        <label for="preco">Preço: R$</label>
         <input type="number" name="preco">
         <br>
         <label for="quantidade">Quantidade: </label>

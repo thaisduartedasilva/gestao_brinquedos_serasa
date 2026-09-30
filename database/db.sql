@@ -11,4 +11,6 @@ CREATE TABLE brinquedo(
 );
 
 INSERT INTO brinquedo (nome, categoria, faixa_etaria, preco, quantidade) VALUES
-('Cubo magico', 'jogo', '7-10 anos', '20', '200');
+('Cubo magico', 'jogo', '7-10 anos', '20', '200'),
+('Quebra cabeça', 'jogo', '1-3 anos', '10', '80'),
+('Xadrez', 'jogo', '3-6 anos', '40', '2');
