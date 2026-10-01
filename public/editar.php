@@ -1,6 +1,6 @@
 <?php
 
-include "../infra/conxao.php";
+include "../infra/conexao.php";
 
 $id = $_GET["id"];
 $sql = "SELECT * FROM brinquedo WHERE id = $id";
@@ -19,7 +19,7 @@ $brinquedos = mysqli_fetch_assoc($resultado);
 <body>
     <header>
         <h1>Editar Brinquedo</h1>
-    </herader>
+    </header>
     <main>
         <form action = "atualizar.php" method = "POST">
             <input type = "hidden" name = "id" value = "<?php echo $brinquedos["id"]?>">
@@ -30,12 +30,12 @@ $brinquedos = mysqli_fetch_assoc($resultado);
             <input type="text" name="categoria" value="<?php echo $brinquedos["categoria"]?>">
             <br>
             <label for="faixa_etaria">Faixa Etária: </label>
-            <select name="faixa_etaria" value="<?php echo $brinquedos["faixa_etaria"]?>">
-                <option value=faixa_etaria>Idades</option>
-                <option value=6-12 meses>6-12 meses</option>
-                <option value=1-3 anos>1-3 anos</option>
-                <option value=3-6 anos>3-6 anos</option>
-                <option value=7-10 anos>7-10 anos</option>
+            <select name="faixa_etaria">
+                <option value="">Idades</option>
+                <option value="6-12 meses">6-12 meses</option>
+                <option value="1-3 anos">1-3 anos</option>
+                <option value="3-6 anos">3-6 anos</option>
+                <option value="7-10 anos">7-10 anos</option>
             </select>
             <br>
             <label for="preco">Preco: </label>

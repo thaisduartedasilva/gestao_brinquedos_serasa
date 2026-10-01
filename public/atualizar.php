@@ -10,13 +10,13 @@ $preco = $_POST["preco"];
 $quantidade = $_POST["quantidade"];
 
 $sql = "UPDATE brinquedo SET nome = ?, categoria = ?, faixa_etaria = ?, preco = ?, quantidade = ? WHERE id = ?";
-$stmt = $conn->prepare($sql);
+$stmt = $conexao->prepare($sql);
 
-$stmt->bind_param("sssiii", $nome, $categoria, $faixa_etaria, $preco, $quantidade, $id);
+$stmt->bind_param("sssidi", $nome, $categoria, $faixa_etaria, $preco, $quantidade, $id);
 
 $stmt->execute();
 
 header("Location: ../index.php");
-//exit;
+exit;
 
 ?>

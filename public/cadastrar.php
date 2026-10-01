@@ -1,6 +1,6 @@
 <?php
 
-include(.../index.php);
+include "../infra/conexao.php";
 
 $nome = $_POST["nome"];
 $categoria = $_POST["categoria"];
@@ -10,11 +10,11 @@ $quantidade = $_POST["quantidade"];
 
 $sql = "INSERT INTO brinquedo (nome, categoria, faixa_etaria, preco, quantidade) VALUES (?, ?, ?, ?, ?)";
 
-$stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "sssii", $nome, $categoria, $faixa_etaria, $preco, $quantidade);
+$stmt = mysqli_prepare($conexao, $sql);
+mysqli_stmt_bind_param($stmt, "sssdi", $nome, $categoria, $faixa_etaria, $preco, $quantidade);
 
 mysqli_stmt_execute($stmt);
 
-header("Location: .../index.php");
+header("Location: ../index.php");
 
 ?>

@@ -53,11 +53,11 @@ $brinquedo = mysqli_query($conexao, "SELECT * FROM brinquedo");
         <br>
         <label for="faixa_etaria" class="faixa_etaria">Faixa Etária</label>
         <select name="faixa_etaria">
-            <option value=faixa_etaria>Idades</option>
-            <option value=6-12 meses>6-12 meses</option>
-            <option value=1-3 anos>1-3 anos</option>
-            <option value=3-6 anos>3-6 anos</option>
-            <option value=7-10 anos>7-10 anos</option>
+            <option value="">Idades</option>
+            <option value="6-12 meses">6-12 meses</option>
+            <option value="1-3 anos">1-3 anos</option>
+            <option value="3-6 anos">3-6 anos</option>
+            <option value="7-10 anos">7-10 anos</option>
         </select>
         <br>
         <label for="preco">Preço: R$</label>
