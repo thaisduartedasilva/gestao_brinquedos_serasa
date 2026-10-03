@@ -38,7 +38,7 @@ $brinquedo = mysqli_query($conexao, "SELECT * FROM brinquedo");
                 <td>
                     <a href="public/editar.php?id=<?php echo $brinquedos["id"] ?>">Editar</a>
                     <a href="public/excluir.php?id=<?php echo $brinquedos["id"] ?>">Excluir</a>
-                <td>
+                </td>
             </tr>
         <?php } ?>
     </table>

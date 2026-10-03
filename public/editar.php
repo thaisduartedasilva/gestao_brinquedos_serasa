@@ -3,8 +3,12 @@
 include "../infra/conexao.php";
 
 $id = $_GET["id"];
-$sql = "SELECT * FROM brinquedo WHERE id = $id";
-$resultado = mysqli_query($conexao, $sql);
+$sql = "SELECT * FROM brinquedo WHERE id = ?";
+$stmt = mysqli_prepare($conexao, $sql);
+mysqli_stmt_bind_param($stmt, "i", $id);
+mysqli_stmt_execute($stmt);
+
+$resultado = mysqli_stmt_get_result($stmt);
 $brinquedos = mysqli_fetch_assoc($resultado);
 
 ?>
